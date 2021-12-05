@@ -24,6 +24,9 @@ public class Configuration {
     private String user = "";
     private String password = "";
     private String content = "";
+    private String recipientMail = "";
+    private String senderMail = "";
+    private String system = "";
     private static Configuration config = null; //singleton
 
     /* ---------------------------------------- Constants ----------------------------------------------------------- */
@@ -62,6 +65,9 @@ public class Configuration {
             this.user = properties.getProperty("user");
             this.password = properties.getProperty("password");
             this.content = properties.getProperty("content");
+            this.recipientMail = properties.getProperty("recipientMail");
+            this.senderMail = properties.getProperty("senderMail");
+            this.system = properties.getProperty("system");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -80,6 +86,19 @@ public class Configuration {
     public String getContent() {
         return content;
     }
+
+    public String getRecipientMail() {
+        return recipientMail;
+    }
+
+    public String getSenderMail() {
+        return senderMail;
+    }
+
+    public String getSystem() {
+        return system;
+    }
+
     /* ---------------------------------------- toString ----------------------------------------------------------- */
 
 }
