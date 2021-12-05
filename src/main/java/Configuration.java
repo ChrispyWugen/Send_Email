@@ -26,6 +26,7 @@ public class Configuration {
     private String content = "";
     private String recipientMail = "";
     private String senderMail = "";
+    //TODO private String SMTPAddress = "";
     private String system = "";
     private static Configuration config = null; //singleton
 
@@ -68,6 +69,7 @@ public class Configuration {
             this.recipientMail = properties.getProperty("recipientMail");
             this.senderMail = properties.getProperty("senderMail");
             this.system = properties.getProperty("system");
+            //TODO this.SMTPAddress = properties.getProperty("SMTPAddress");
         }catch (Exception e){
             e.printStackTrace();
         }

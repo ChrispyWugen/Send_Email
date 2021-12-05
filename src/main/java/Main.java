@@ -43,6 +43,10 @@ public class Main {
 
             // Setup mail server
             properties.setProperty("mail.smtp.host", config.getSystem());
+            properties.setProperty("mail.user", config.getUser());
+            properties.setProperty("mail.password", config.getPassword());
+            //properties.setProperty("mail.smtp.socketFactory.port","25"); TODO
+            //properties.setProperty("mail.smtp.port","465"); TODO
 
             // Get the default Session object.
             Session session = Session.getDefaultInstance(properties);
